@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Kanban Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-left"></div> 
+        
+        <h1 class="header-title">My Kanban Board</h1>
+        
+        <div class="header-controls">
+            <input type="text" id="searchInput" placeholder="Search tasks..." class="search-input">
+            
+            <div class="dropdown-wrapper">
+                <button class="icon-btn" onclick="toggleDropdown('notifDropdown')">
+                    🔔 <span id="notifBadge" class="badge" style="display: none;">0</span>
+                </button>
+                <div id="notifDropdown" class="dropdown-menu">
+                    <div class="dropdown-header">Urgent Tasks (< 2 hrs)</div>
+                    <div id="notifList"></div>
+                </div>
+            </div>
+
+            <div class="dropdown-wrapper">
+                <button class="profile-btn" onclick="toggleDropdown('profileDropdown')">SK</button>
+                <div id="profileDropdown" class="dropdown-menu">
+                    <div class="dropdown-item"><strong>Suman Kumar</strong><br><small>suman@2005</small></div>
+                    <hr>
+                    <div class="dropdown-item logout-text" onclick="logout()">Logout</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="board" id="board">
+        </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
